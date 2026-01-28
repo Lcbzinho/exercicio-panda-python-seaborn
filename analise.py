@@ -48,7 +48,7 @@ def extrair_taxa_cdi():
             
     except requests.exceptions.RequestException as e:
         # Em caso de falha na conexão, usar dados simulados para fins educacionais
-        print(f"Aviso: Não foi possível conectar à API da B3. Usando dados simulados.")
+        print(f"Aviso: Não foi possível conectar à API do Banco Central. Usando dados simulados.")
         
         # Gerar taxa CDI simulada (taxa típica varia entre 12% e 14%)
         taxa = round(random.uniform(12.5, 13.8), 4)
@@ -197,7 +197,8 @@ def main():
     Função principal que executa a análise completa.
     """
     print("=" * 60)
-    print("ANÁLISE DE TAXA CDI - B3")
+    print("ANÁLISE DE TAXA CDI")
+    print("Fonte: Banco Central do Brasil")
     print("=" * 60)
     print()
     
